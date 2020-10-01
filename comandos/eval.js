@@ -1,3 +1,5 @@
+const { catch } = require("../config/connect");
+
 module.exports.run = async(client, message, args, Discord, MessageEmbed) => {
     message.delete()
     if(message.author.id === "") return;
@@ -10,10 +12,6 @@ module.exports.run = async(client, message, args, Discord, MessageEmbed) => {
     .addField("[SALIDA]", "```js\n"+evalu+"```")
     .setColor("RANDOM"))
   } catch(e) {
-     message.channel.send(new MessageEmbed()
-    .setTitle("[EVALUACION]")
-    .addField("[ENTRADA]", "```js\n"+code+"```")
-    .addField("[SALIDA]", "```js\n"+e+"```")
-    .setColor("RANDOM"))
+
   }
   }
