@@ -1,5 +1,3 @@
-const { catch } = require("../config/connect");
-
 module.exports.run = async(client, message, args, Discord, MessageEmbed) => {
     message.delete()
     if(message.author.id === "") return;
